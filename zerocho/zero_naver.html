@@ -86,7 +86,7 @@
         #warp-center {
             width: 1280px;
             display: inline-block;
-            background-color: yellow;
+            /* background-color: yellow; */
             text-align: left;
         }
         #header {
@@ -179,11 +179,11 @@
             </div>
             <style>
                 #search > form {
+                    display: inline-flex;
                     width: 708px;
                     height: 60px;
                     border: 1px solid #03c75a;
                     border-radius: 33px;
-                    display: inline-flex;
                     text-align: left;
                 }
 
@@ -196,6 +196,7 @@
                     height: 100%;
                     padding-left: 10px;
                     position: relative;
+
                 }
                 #search-input {
                     width: 480px;
@@ -211,10 +212,16 @@
                     fill: #03c75a;
                 }
                 #search_right {
+                    flex: 1;   
                     display: flex;
-                    flex: 1;
                     align-items: stretch;
                     justify-content: flex-end;
+                }
+
+                #seaerch-keybord, #cearch-recent, #Search-button {
+                    background: transparent;
+                    border: none;
+                    cursor:pointer;
                 }
                 #search-keyboard::before {
                     content: "";
