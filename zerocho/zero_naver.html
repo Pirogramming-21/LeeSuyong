@@ -166,6 +166,14 @@
             margin: -1px;
             overflow: hidden;
         }
+        #main-shopping {
+            height: 560px;
+            display: flex;
+            flex-flow: column;
+        }
+        #main-shopping footer .text {
+            min-width: 176px;
+        }
     </style>
 </head>
 <body>
@@ -813,7 +821,7 @@
                     width: 20px;
                     height: 20px;
                 }
-                .main-newstand footer .prev, #main-newstand footer .next {
+                .section.left-section footer .prev, section.left-section footer .next {
                     background: none;
                     border: none;
                     content: '';
@@ -844,21 +852,24 @@
                     width: 10px;
                     height: 12px;
                 }
-                #main-newstand footer .text {
+                section.left-section footer .text {
                     padding : 0 16px;
                     min-width: 156px;
                 }
-                #main-newstand footer .news {
+                section.left-section footer .hot {
+                    color: #9858f5;
+                }
+                section.left-section footer .news {
                     color: var(--color_news)
                 }
-                #main-newstand footer .total {
+                section.left-section footer .total {
                     color: rgba(96, 96, 96, .5)
                 }
             </style>
             <main id="main">
                 <div id="main-left">
                     <aside id="main-left-ad"></aside>
-                    <section id="main-newstand" class="seft-section">
+                    <section id="main-newstand" class="left-section">
                         <div id="main-newstand-top">
                             <header>
                                 <a href="#" class="bold ">뉴스스탠드</a>
@@ -924,7 +935,80 @@
                         </footer>
                     </section>
 
-                    <section id="main-shopping"></section>
+                    <section id="main-shopping" class="left-section">
+                        <div id="main-shopping-top">
+                            <header>
+                                <a href="#" class="bold ">쇼핑</a>
+                                <a href="#" class="slash">멘즈</a>
+                                <a href="#" class="slash">원뿔딜</a>
+                                <a href="#" class="slash">쇼핑라이브</a>
+                            </header>
+                            <div id="main-shopping-gray">
+                                <div class="left">
+                                    <a href="#">오늘의 혜택</a>
+                                    <div>
+                                        <a href="#">제로초 지금 배고파제로초 지금 배고파제로초 지금 배고파제로초 지금 배고파제로초 지금 배고파</a>
+                                    </div>
+                                </div>
+                                <div class="right">
+                                    <span>1</span>
+                                    <span>/18</span>
+                                    <button class="prev"><span class="blind">이전페이지</span></button>
+                                    <button class="next"><span class="blind">다음페이지</span></button>
+                                </div>
+                                
+                            </div>
+                            <div id="main-shopping-grid">
+                                <div class="item">
+                                    <div class="image"></div>
+                                    <div class="text">독보적인 퀄리티 우린품격을입어요</div>
+                                </div>
+                                <div class="item">
+                                    <div class="image"></div>
+                                    <div class="text">독보적인 퀄리티 우린품격을입어요</div>
+                                </div>
+                                <div class="item">
+                                    <div class="image"></div>
+                                    <div class="text">독보적인 퀄리티 우린품격을입어요</div>
+                                </div>
+                                <div class="item">
+                                    <div class="image"></div>
+                                    <div class="text">독보적인 퀄리티 우린품격을입어요</div>
+                                </div>
+                                <div class="item">5</div>
+                                <div class="item">6</div>
+                                <div class="item">
+                                    <div class="image"></div>
+                                    <div class="text">독보적인 퀄리티 우린품격을입어요</div>
+                                </div>
+                                <div class="item">
+                                    <div class="image"></div>
+                                    <div class="text">독보적인 퀄리티 우린품격을입어요</div>
+                                </div>
+                                <div class="item">
+                                    <div class="image"></div>
+                                    <div class="text">독보적인 퀄리티 우린품격을입어요</div>
+                                </div>
+                                <div class="item">
+                                    <div class="image"></div>
+                                    <div class="text">독보적인 퀄리티 우린품격을입어요</div>
+                                </div>
+                                <div class="item">
+                                    <div></div>
+                                    <div>아웃렛 쇼핑 득템찬스! 시즌오프SALE</div>
+                                </div>
+                            </div>
+                        </div>
+                        <footer>
+                            <button class="prev"><span class="blind">이전 페이지</span></button>
+                            <div class="text"><span class="news">언론사</span>&nbsp;더보기&nbsp;1<span class="total">/4</span></div>
+                            <button class="next"><span class="blind">다음 페이지</span></button>
+                            <button class="list"><span class="blind">목록보기</span></button>
+                            <button class="grid"><span class="blind">격자보기</span></button>
+
+                        </footer>
+                        
+                    </section>
                 </div>
                 <div id="main-right">
                     <section id="main-login">
