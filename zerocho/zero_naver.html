@@ -484,18 +484,16 @@
             </nav>
 
             <style>
-                #main {
-                    margin-top: 62px;
+                 #main {
+                    margin-top: 51px;
                     display: flex;
                 }
                 #main-left {
                     width: 830px;
                     margin-right: 30px;
-                    margin-bottom: 16px;
                 }
                 #main-right {
                     width: 420px;
-                    margin-bottom: 16px;
                 }
                 #main-left-ad, #main-right-ad {
                     background: gray;
@@ -504,57 +502,24 @@
                     border-radius: 8px;
                     margin-bottom: 16px;
                 }
+                #main-left-ad {
+                    height: 130px;
+                }
                 section[id^=main] {
                     box-shadow: 0 0 0 1px #e3e5e8, 0 1px 2px 0 rgba(0,0,0,.04);
                     border-radius: 8px;
                     margin-bottom: 16px;
                 }
-                #main-left-ad {
-                    height: 130px;
-                }
-
-                .main-weather-and-stock  {
-                    padding: 0, 18px;
-                }
-
-                .main-weather-and-stock > header {
-                    height: 52px;
-                    padding: 6px 0;
-                }
-                #main-weather >div, #main-stock >div {
-                    border-top: 1px solid var(--color_border_in);
-                }
-
-                #main-weather {
-                    height: 236px;
-
-                    box-shadow: 0 0 0 1px #e3e5e8, 0 1px 2px 0 rgba(0,0,0,.04);
-                    border-radius: 8px;
-                    margin-bottom: 16px;
-                }
-                #main-stock {
-                    height: 236px;
-                }
-                
-                #main-shopping {
-                    height: 560px;
-                    display: flex;
-                    flex-flow: column;
-                }
-
                 #main-login {
                     height: 164px;
                     padding: 21px 20px 18px;
                     font-size: 1.4rem;
-
                     display: flex;
                     flex-flow: column;
                 }
-
                 #main-login > div:first-of-type {
                     line-height: 20px;
                 }
-
                 #main-login-button {
                     margin-top: 13px;
                     padding: 17px 0;
@@ -566,7 +531,6 @@
                     text-decoration: none;
                     margin-bottom: 16px;
                 }
-
                 #main-login-button i {
                     vertical-align: -1px;
                     background-image: url(./sp_main.png);
@@ -578,7 +542,6 @@
                     display: inline-block;
                     margin: 3px 8px 0 0;
                 }
-
                 #main-login > div:last-of-type {
                     font-size: 1.3rem;
                     display: flex;
@@ -589,16 +552,13 @@
                     color: var(--color_caption2);
                     letter-spacing: -0.4px;
                 }
-
                 #main-login > div:last-of-type a:first-of-type, #main-login > div:last-of-type a:last-of-type {
                     position: relative;
                     top: 5px;
                 }
-
-                #main-login > div:last-of-type a:visited {
+                #main-login > div:last-of-type a:hover {
                     text-decoration: underline;
                 }
-
                 #main-login > div:last-of-type > a:nth-of-type(2)::before, #main-login > div:last-of-type > a:nth-of-type(2)::after {
                     content: '';
                     display: inline-block;
@@ -608,43 +568,78 @@
                     background-color: var(--color_dot_divider);
                     margin: 4px 12px 0;
                 }
-
                 #main-right-ad {
                     height: 240px;
                 }
-
-            </style>
-            <style>
+                .main-weather-and-stock {
+                    padding: 0 18px;
+                }
+                .main-weather-and-stock > header {
+                    height: 52px;
+                    padding: 6px 0;
+                }
+                .main-weather-and-stock > div {
+                    border-top: 1px solid var(--color_border_in);
+                }
+                #main-weather {
+                    height: 236px;
+                }
+                #main-stock {
+                    height: 236px;
+                }
                 #main-newstand {
                     height: 426px;
                     display: flex;
                     flex-flow: column;
                 }
-
-                #main-newstand-top {
+                #main-newstand-top, #main-shopping-top {
                     flex: 1;
                     padding: 18px 20px;
                 }
-
-                #main-newstand header {
+                #main-newstand-top .dot::before {
+                    content: '';
+                    display: inline-block;
+                    width: 4px;
+                    height: 4px;
+                    background-color: #d3d5d7;
+                    background-color: var(--color_dot_divider);
+                    margin: 9px 7px 0;
+                    border-radius: 50%;
+                    vertical-align: 5px;
+                }
+                .left-section .slash, .left-section .dot {
+                    color: rgba(8,8,8,.5);
+                    font-weight: 800;
+                }
+                .left-section .slash {
+                    position: relative;
+                    padding-left: 26px;
+                }
+                .left-section .slash::before {
+                    content: '';
+                    display: inline-block;
+                    position: absolute;
+                    top: 4px;
+                    left: 13px;
+                    width: 1px;
+                    height: 15px;
+                    background-color: #d3d5d7;
+                    background-color: var(--color_dot_divider);
+                    transform: skewX(-15deg);
+                }
+                .left-section header {
                     font-size: 1.6rem;
-                    color: rgba(8,8,8, .5);
+                    color: rgba(8,8,8,.5);
                     display: flex;
                     justify-content: flex-start;
                     line-height: 23px;
                     margin-bottom: 17px;
                 }
-
-                #main-newstand header.bold {
+                .left-section header .bold {
                     font-weight: bold;
                     color: black;
                 }
-
-                #main-newstand header.visited {
-                    color: inherit;
-                }
-
-                #main-newstand header.grey {
+                #main-newstand-gray {
                     display: flex;
                     justify-content: flex-start;
                     height: 50px;
@@ -654,22 +649,120 @@
                     font-size: 1.4rem;
                     line-height: 26px;
                 }
-
-                #main-newstand a:hover {
+                #main-newstand-gray .left {
+                    flex: 1;
+                    display: flex;
+                }
+                #main-newstand-gray .left > a:first-of-type {
+                    width: 85.5px;
+                }
+                #main-newstand-gray .left > a:first-of-type::after {
+                    content: '';
+                    background: url('./sp_main.png');
+                    background-size: 422px 405px;
+                    background-position: -412px -327px;
+                    background-repeat: no-repeat;
+                    width: 9px;
+                    height: 6px;
+                    display: inline-block;
+                    margin: 10px 0 0 5px;
+                    vertical-align: 3px;
+                }
+                #main-newstand-animation {
+                    padding-left: 25px;
+                    position: relative;
+                    display: flex;
+                }
+                #main-newstand-animation::before {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    top: 7px;
+                    left: 12px;
+                    background-color: #d3d5d7;
+                    background-color: var(--color_dot_divider);
+                    width: 1px;
+                    height: 12px;
+                }
+                #main-newstand-animation > a:first-of-type {
+                    position: relative;
+                    top: -1px;
+                    line-height: 26px;
+                }
+                #main-newstand-animation > a:first-of-type::after {
+                    content: '';
+                    display: inline-block;
+                    width: 3px;
+                    height: 3px;
+                    background-color: #d3d5d7;
+                    background-color: var(--color_dot_divider);
+                    margin: 12px 6px 0 6px;
+                    border-radius: 50%;
+                    vertical-align: 5px;
+                }
+                #main-newstand-animation-target {
+                    width: 400px;
+                    display: inline-block;
+                    overflow: hidden;
+                }
+                #main-newstand-animation-target > div {
+                    animation: newsAnimation 5s linear 3s infinite;
+                }
+                #main-newstand-animation-target a {
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    width: 400px;
+                    display: inline-block;
+                    overflow: hidden;
+                }
+                #main-newstand-gray .right {
+                    display: flex;
+                }
+                #main-newstand-gray .bold {
+                    font-weight: bold;
+                    padding-left: 25px;
+                    position: relative;
+                }
+                #main-newstand-gray .bold::before {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    top: 7px;
+                    left: 12px;
+                    width: 1px;
+                    height: 12px;
+                    background-color: #d3d5d7;
+                    background-color: var(--color_dot_divider);
+                }
+                .left-section a {
+                    text-decoration: none;
+                }
+                .left-section a:visited {
+                    color: inherit;
+                }
+                .left-section a:hover {
                     text-decoration: underline;
                 }
-
                 #main-newstand-grid {
                     display: grid;
                     justify-content: center;
                     align-items: center;
                     height: 224px;
                     grid-gap: 1px;
-                    grid-template-rows: 56px 56px 56px 56px;
-                    grid-template-columns: 131.27px 131.27px 131.27px 131.27px 131.27px 131.27px ;
+                    background-color: var(--color_border_in);
+                    grid-template-rows: repeat(4, 1fr);
+                    width: 790px;
+                    grid-template-columns: repeat(6, 1fr);
                     border: 1px solid var(--color_border_in);
                     border-radius: 4px;
                     margin-top: 18px;
+                }
+                #main-newstand-grid > div {
+                    height: 100%;
+                    background-color: white;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
                 }
 
                 .left-section footer {
@@ -688,20 +781,34 @@
             <main id="main">
                 <div id="main-left">
                     <aside id="main-left-ad"></aside>
-                    <section id="main-newstand">
+                    <section id="main-newstand" class="seft-section">
                         <div id="main-newstand-top">
                             <header>
-                                <a href="#">뉴스스탠드</a>
-                                <a href="#">언론사편집</a>
-                                <a href="#">엔터</a>
-                                <a href="#">스포츠</a>
-                                <a href="#">경제</a>
+                                <a href="#" class="bold ">뉴스스탠드</a>
+                                <a href="#" class="dot">언론사편집</a>
+                                <a href="#" class="slash">엔터</a>
+                                <a href="#" class="slash">스포츠</a>
+                                <a href="#" class="slash">경제</a>
                             </header>
                             <div id="main-newstand-gray">
-                                <a href="#" class="bold">전체언론사</a>
-                                <a href="#">언합뉴스</a>
-                                <a href="#">제로초제로초제로초제로초제로초제로초제로초제로초제로초</a>
-
+                                <div class="left">
+                                    <a href="#">전체언론사</a>
+                                    <div id="main-newstand-animation">
+                                        <a href="#">연합뉴스</a>
+                                        <div id="main-newstand-animation-target">
+                                            <div>
+                                                <a href="#">제로초 지금 배고파제로초 지금 배고파제로초 지금 배고파제로초 지금 배고파제로초 지금 배고파</a>
+                                                <a href="#">원초 지금 배고파원초 지금 배고파원초 지금 배고파원초 지금 배고파원초 지금 배고파원초 지금 배고파</a>
+                                                <a href="#">투초 지금 배고파투초 지금 배고파투초 지금 배고파투초 지금 배고파투초 지금 배고파투초 지금 배고파</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="right">
+                                    <a href="#" >뉴스 스탠드</a>
+                                    <a href="#">뉴스홈</a>
+                                </div>
+                                
                             </div>
                             <div id="main-newstand-grid">
                                 <div>언론사</div>
