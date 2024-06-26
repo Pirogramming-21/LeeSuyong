@@ -76,6 +76,7 @@
             margin: 0;
             padding: 0;
         }
+    
         #warp {
             text-align:center
         }
@@ -85,6 +86,10 @@
             background-color: yellow;
             text-align: left;
         }
+        #header {
+            text-align: left;
+            position: relative;
+        }
         #header-hambuger {
             margin-top: 18px;
             padding: 10px;
@@ -92,10 +97,24 @@
             background: none;
             border: none;
             cursor: pointer;
+            position: absolute;
+            top: 18px;
+            left: 10;   
         }
-        #header-hambuger:hover {
+        #header-hambuger:hover::before {
+            content:"";
+            width: 44px;
+            height: 44px;
             background-color: var(--color_option_bg);
             border-radius: 50%;
+            position: absolute;
+            left: 1px;
+            top: 1px;
+        }
+        #header-hambuger:hove > div {
+            position: relative;
+            left: 1px;
+            top: 1px;
         }
         #header-hambuger >div {
             background-position: -326px -161px;
