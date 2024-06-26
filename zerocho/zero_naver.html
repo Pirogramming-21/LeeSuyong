@@ -186,7 +186,9 @@
                     border-radius: 33px;
                     text-align: left;
                 }
-
+                #search > form:hover {
+                    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .12);
+                }
                 #search-svg {
                     display: inline-flex;
                     justify-content: center;
@@ -211,6 +213,12 @@
                     height: 24px;
                     fill: #03c75a;
                 }
+                #search-input::placeholder {
+                    color: white;
+                }
+                #search-input:focus::placeholder {
+                    color: #e4e4e4;
+                }
                 #search_right {
                     flex: 1;   
                     display: flex;
@@ -218,7 +226,7 @@
                     justify-content: flex-end;
                 }
 
-                #seaerch-keybord, #cearch-recent, #Search-button {
+                #search-keyboard, #search-recent, #search-button {
                     background: transparent;
                     border: none;
                     cursor:pointer;
@@ -233,6 +241,9 @@
                     width: 24px;
                     height: 16px;
                 }
+                #search-keyboard:hover::before {
+                    filter: brightness(0.7);
+                }
                 #search-recent::before {
                     content: "";
                     display: block;
@@ -243,6 +254,25 @@
                     width: 10px;
                     height: 6px;
                 }
+                #search-button {
+                    padding: 17px 27px 16px 10px;
+                }
+                #search-button > div {
+                    background: #03c75a;
+                    width: 25px;
+                    height: 25px;
+                }
+             
+                #search-button > div::before {
+                        content: '';
+                        display: inline-block;
+                        background-image: url(https://pm.pstatic.net/resources/asset/sp_main.712d35ae.png);
+                        background-size: 442px 434px;
+                        background-position: -367px -305px;
+                        background-repeat: no-repeat;
+                        width: 25px;
+                        height: 25px;
+                    }
             </style>
             <div id="search">
                 <form action="">
