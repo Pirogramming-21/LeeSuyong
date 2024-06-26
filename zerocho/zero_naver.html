@@ -6,19 +6,38 @@
     <title>NAVER</title>
 
     <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+        }
         #warp {
             text-align:center
         }
         #warp-center {
             width: 1280px;
+            display: inline-block;
             background-color: yellow;
+        }
+        #hambuger {
+            margin-top: 18px;
+            background-color: blue;
+            width: 46px;
+            height: 46px;
+        }
+        #main {
+            height: 2000px;
         }
     </style>
 </head>
 <body>
     <div id="warp">
         <div id="warp-center">
-            <div id="header"></div>
+            <div id="header">
+                <div id="hamburger">    
+
+                </div>
+
+            </div>
             <div id="search"></div>
             <div id="nav"></div>
             <div id="main"></div>
