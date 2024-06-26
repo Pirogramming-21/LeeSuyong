@@ -75,7 +75,7 @@
         * {
             box-sizing: border-box;
         }
-        html, body {
+        html, body, form {
             margin: 0;
             padding: 0;
         }
@@ -124,11 +124,11 @@
             background-repeat: no-repeat;
             background-size: 422px 405px;
         }
-        #header-hambuger {
+        #header-hamburger {
             left: -10px;   
         }
 
-        #header-hambuger >div {
+        #header-hamburger >div {
             background-position: -335px -284px;
         }
         #header-naverpay {
@@ -164,7 +164,7 @@
     <div id="warp">
         <div id="warp-center">
             <div id="header">
-                <button id="header-hambuger">    
+                <button id="header-hamburger">    
                     <div></div>
                     <span class="blind">확장 영역</span>
                 </button>
@@ -177,7 +177,28 @@
                     <span class="blind">알림</span>
                 </button>
             </div>
-            <div id="search"></div>
+            <style>
+                #search > form {
+                    width: 708px;
+                    height: 60px;
+                    border: 1px solid #03c75a;
+                    border-radius: 33px;
+                    display: inline-flex;
+                }
+                #search > form > input {
+                    width: 480px;
+                    height: 100%;
+                    border: none;
+                    outline: none;
+                }
+            </style>
+            <div id="search">
+                <form action="">
+                    <labal for="search-input" class="blind">검색어 입력</labal>
+                    <input type="text" id="search-input">
+                    <button class="blind">검색</button>
+                </form>
+            </div>
             <div id="nav"></div>
             <div id="main"></div>
         </div>
