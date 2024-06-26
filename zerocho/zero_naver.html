@@ -87,7 +87,7 @@
             width: 1280px;
             display: inline-block;
             /* background-color: yellow; */
-            text-align: left;
+            text-align: center;
         }
         #header {
             text-align: left;
@@ -189,6 +189,7 @@
                 #search > form:hover {
                     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .12);
                 }
+
                 #search-svg {
                     display: inline-flex;
                     justify-content: center;
@@ -200,10 +201,27 @@
                     position: relative;
 
                 }
+
+                #search-svg::after {
+                    display: none;
+
+                }
+
+                #search > form:hover-whitin #seaerch-svg::after {
+                    position: absolute;
+                    right: 0;
+                    content: '';
+                    width: 1px;
+                    height: 20px;
+                    background-color: #e4e4e4;
+                    top: 20px;
+                    display: inline-block;
+                }
+
                 #search-input {
                     width: 480px;
                     padding: 17px 0;
-                    font-size: 1.3rem;
+                    font-size: 2rem;
                     line-height: 24px;
                     border: none;
                     outline: none;
@@ -268,7 +286,7 @@
                         display: inline-block;
                         background-image: url(https://pm.pstatic.net/resources/asset/sp_main.712d35ae.png);
                         background-size: 442px 434px;
-                        background-position: -367px -305px;
+                        background-position:  -364px -106px;
                         background-repeat: no-repeat;
                         width: 25px;
                         height: 25px;
