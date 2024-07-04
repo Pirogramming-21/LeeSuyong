@@ -1,12 +1,10 @@
 
-//Fetch the items form the JSON file
+
 function loadItems() {
     return fetch('data/data.json').then(response => response.json() )
     .then(json => json.items);   
 }
 
-
-//main
 loadItems()
 .then(items => {
     displayItems(items);
@@ -51,7 +49,7 @@ function setEventListeners(items) {
     buttons.addEventListener('click', () => onButtonClick(event, items));
 }
 
-//main
+
 loadItems()
 .then(items => {
     displayItems(items);
