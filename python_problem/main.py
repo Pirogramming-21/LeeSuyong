@@ -21,7 +21,9 @@ while True:
         if num == 31:
             flag = 1
             break
-    if flag == 1: break
+    if flag == 1:
+        print("playerA win!")
+        break
 
     flag=0
     check = True
@@ -43,4 +45,6 @@ while True:
         if num == 31:
             flag = 1
             break
-    if flag == 1: break
+    if flag == 1:
+        print("playerB win!")
+        break
