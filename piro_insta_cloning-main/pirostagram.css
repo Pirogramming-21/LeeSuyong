@@ -1,0 +1,110 @@
+@import("./reset.css")
+
+:root {
+    --gray: lightgray;
+    --main-border: 3rem;
+}
+
+.header__container{
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 3rem;
+    font-size: 1.25px;
+}
+
+.profile {
+    display: fles;
+    flex-direction: column;
+    margin: 2 rem 1 rem;
+    gap: 1 rem;
+}
+
+.profile__top {
+    display: flex;
+    gap: 1 rem;
+}
+
+.profile__img > img {
+    width: 5rem;
+    height: 5 rem;
+    border-radius:  50%;
+    object-fit: cover;
+    order: 1px solid var(--gary);
+    padding: var(--main-border);
+}
+
+.profile__right {
+    display: flex;
+    flex-direction: column;
+}
+
+.profile__username {
+
+}
+
+.profile__btn > button {
+    width: 100%;
+    background-color: white;
+    border: var(--main-border);
+    padding: .5 rem;
+    border-radius: 5px;
+}
+
+.story__contaioner {
+    padding: 2 rem;
+    display: flex;
+    gap: 1 rem;
+    overflow: auto;
+
+}
+
+.story__content {
+    display: flex;
+    flex-direction: column;
+    flex-direction: col;
+    align-items: center;
+    gap: .5 rem;
+
+}
+
+.story__img > img {
+    width: 3.5 rem;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 50%;
+    border: var(--main-border);
+    padding: 3px;
+
+}
+
+.toolvar__container {
+    display: flex;
+    justify-content: space-between;
+    padding: 5 rem 1 rem;
+
+
+}
+
+.content__container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3px;
+}
+
+.centent__photo > img {
+    width: 100%;
+    object-fit: cover;
+}
+
+header {
+    position: sticky;
+    top: 0px;
+    background-color: white;
+
+}
+
+footer {
+    position: sticky;
+    bottom: 0px;
+}
+
