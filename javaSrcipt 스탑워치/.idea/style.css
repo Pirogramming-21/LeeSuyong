@@ -1,0 +1,121 @@
+body {
+    /*background-color: white;*/
+    /*align-items: center;*/
+    /*!*text-align: center;*!*/
+    /*margin: 0;*/
+    /*!*display: flex;*!*/
+    /*justify-content: center;*/
+    font-family: "Apple SD Gothic Neo";
+    /*vertical-align: center;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh;
+    margin: 0;
+}
+
+.container {
+    padding: 2rem;
+    border-radius: 30px;
+    text-align: center;
+    max-width: 400px; /* 최대*/
+    width: 90%; /* 모바일 대응을 위한 반응형 너비 */
+}
+header {
+    font-size: large;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+
+main {
+    margin-top: 10px;
+    background-color: rgb(181,191,181);
+    padding: 1rem;
+    border-radius: 20px;
+
+    box-shadow: 5px 5px 5px  rgba(0,0,0,0.40);
+    width: 60%;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.timer {
+    background-color: white;
+    /*padding: 10px;*/
+    border-radius: 15px;
+    font-size: 2.5rem;
+    margin: 1rem 0;
+    justify-content: center;
+}
+
+.console {
+    display: flex;
+    justify-content: space-around;
+    /*margin: 0.5rem 0;*/
+    height: 39px;
+}
+
+button {
+    cursor: pointer;
+    background-color: rgb(230,230,230);
+    border-radius: 12px;
+    transiton: background-color 0.5s;
+    font-size: 0.7rem;
+    border: none;
+    height: 100%;
+}
+
+button:hover {
+    background-color: white;
+}
+
+footer {
+    margin-top: 20px;
+    max-width: 450px;
+    width: 90%;
+    text-align: center;
+}
+.footer-title {
+    padding: 2 10% 0 10%;
+    border-radius: 20px;
+    margin-top: 10px;
+    height: 35px;
+
+    display: flex;
+    background-color: rgb(181,191,181);
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.footer-record {
+    padding: 2 10% 0 10%;
+    border-radius: 20px;
+    margin-top: 10px;
+    height: 35px;
+
+    display: flex;
+    background-color: withe;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1rem;
+    cursor: pointer;
+    flex-direction: column;
+}
+
+.record-container {
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1rem;
+}
+
+
