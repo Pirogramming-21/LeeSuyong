@@ -1,4 +1,4 @@
-def brGame(mem):
+def brGame(mem, num):
     check = True
     while check :
         userNum = input("부를 숫자의 개수를 입력하세요(1, 2, 3만 입력 가능) :")
@@ -12,22 +12,21 @@ def brGame(mem):
         except:
             print("정수를 입력하세요")
 
-    for i in range(userNum):
+    for j in range(userNum):
         num += 1
-        print("playerA : " , num)
+        print(i ," : " , num)
         if num == 31:
             print(mem, " win!")
-            return False
-    return True
+            return num
+    return num
 
 num = 0
-flag = True
-while flag:
+while num != 31:
 
     players = ["playerA", "playerB"]
     for i in players:
-        flag = brGame(i)
-        if flag == False:
+        num = brGame(i, num)
+        if num == 31:
             break
 
 
