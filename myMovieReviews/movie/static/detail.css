@@ -1,0 +1,42 @@
+.container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+.movie-review {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    width: 800px;
+}
+.movie-review img {
+    float: left;
+    margin-right: 20px;
+    width: 200px;
+    height: auto;
+}
+.movie-details {
+    overflow: hidden;
+}
+.movie-details h2 {
+    margin-top: 0;
+}
+.movie-details p {
+    margin: 5px 0;
+}
+.review-text {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f1f1f1;
+    border-radius: 8px;
+}
+.actions {
+    text-align: right;
+    margin-top: 10px;
+}
+.actions a {
+    margin-left: 10px;
+    text-decoration: none;
+    color: #333;
+}

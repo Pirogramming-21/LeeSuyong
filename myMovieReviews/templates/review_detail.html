@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Movie Reviews</title>
+    <link rel="stylesheet" href="{% static 'header.css'%}">
+    <link rel="stylesheet" href="{% static 'detail.css'%}">
+</head>
+<body>
+<header>
+    <a class="mainTitle" href="{% url 'review_list' %}"> <h1>my <span style="color: red;">Movie</span> reviews</h1></a>
+    <a class="create" href="{% url 'review_create' %}">Add a New review</a>
+</header>
+<div class="container">
+    <div class="movie-review">
+        <h2>{{ review.title }}</h2>
+        <div class="movie-details">
+            <img src="{% static 'images/spiderman.jpg' %}" alt="스파이더맨">
+            <p><strong>개봉년도:</strong> {{ review.openingDate }}</p>
+            <p><strong>감독:</strong> {{ review.director }}</p>
+            <p><strong>주연:</strong> {{ review.actor}}</p>
+            <p><strong>장르:</strong> {{ review.genre }}</p>
+            <p><strong>별점:</strong> {{ review.score }}</p>
+            <p><strong>러닝타임:</strong> {{ review.runningtime }}분</p>
+        </div>
+        <div class="review-text">
+            {{ review.text }}
+        </div>
+        <div class="actions">
+            <a href="{% url 'review_edit' review.id %}">수정</a>
+            <form action="/review/{{review.id}}/delete" method="post">
+                {% csrf_token %}
+                <input type="submit" value="삭제">
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>

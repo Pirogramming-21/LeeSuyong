@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}My Movie Reviews{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'css/header.css' %}">
+</head>
+<body>
+<header>
+    <h1>my <span style="color: red;">Movie</span> reviews</h1>
+    <a href="{% url 'review_create' %}">Add a New review</a>
+</header>
+<div class="container">
+    {% block content %}
+    {% endblock %}
+</div>
+</body>
+</html>

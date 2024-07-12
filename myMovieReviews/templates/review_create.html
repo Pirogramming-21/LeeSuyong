@@ -1,0 +1,55 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Movie Reviews</title>
+    <link rel="stylesheet" href="{% static 'header.css'%}">
+</head>
+<body>
+<header>
+    <h1 class="mainTitle" >my <span style="color: red;">Movie</span> reviews</h1>
+    <a class="create" href="{% url 'review_create' %}">Add a New review</a>
+</header>
+<div class="container">
+    <form class="movie-form" method="post">
+        {% csrf_token %}
+        <h2><span style="color: black;">Movie</span> review <span>🍿</span></h2>
+        <div>
+            <label for="id_title">제목:</label>
+            <input type="text" name="title" id="id_title">
+        </div>
+        <div>
+            <label for="id_release_year">개봉년도:</label>
+            <input type="number" name="openingDate" id="id_release_year">
+        </div>
+        <div>
+            <label for="id_genre">장르:</label>
+            <input type="text" name="genre" id="id_genre" value="{{ form.genre }}">
+        </div>
+        <div>
+            <label for="id_rating">별점:</label>
+            <input type="number" step="0.1" name="score" id="id_rating">
+        </div>
+        <div>
+            <label for="id_runtime">러닝타임:</label>
+            <input type="number" name="runningtime" id="id_runtime">
+        </div>
+        <div>
+            <label for="id_review">리뷰:</label>
+            <textarea name="text" id="id_review"></textarea>
+        </div>
+        <div>
+            <label for="id_director">감독:</label>
+            <input type="text" name="director" id="id_director">
+        </div>
+        <div>
+            <label for="id_actors">배우:</label>
+            <input type="text" name="actor" id="id_actors">
+        </div>
+        <button type="submit">Save</button>
+    </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Movie Review</title>
+    <link rel="stylesheet" href="{% static 'header.css'%}">
+</head>
+<body>
+    <header>
+        <h1 class="mainTitle" >my <span style="color: red;">Movie</span> reviews</h1>
+        <a class="create" href="{% url 'review_create' %}">Add a New review</a>
+    </header>
+    <div class="container">
+        {% for review in reviews %}
+        <div class="movie-card">
+            <a href="{%  url 'review_detail' pk=review.pk %}">
+                <img src="https://via.placeholder.com/200x300?text=스파이더맨" alt="스파이더맨">
+                <h2>{{ review.title }}</h2>
+                <p>개봉년도 {{ review.openingDate }}</p>
+                <p>장르 {{ review.genre }}</p>
+                <p>별점 {{ review.score }}</p>
+            </a>
+        </div>
+        {% endfor %}
+
+    </div>
+</body>
+</html>
+
