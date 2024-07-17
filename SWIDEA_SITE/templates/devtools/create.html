@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block contents %}
+    <div class="container">
+        <div class="content">
+            <h2>DevTool Creation</h2>
+            <form
+                    action="{% url 'devtools:create' %}"
+                    method="post"
+            >
+                {%csrf_token%} {{form.as_p}}
+                <button class="btn btn-success">SUBMIT</button>
+            </form>
+        </div>
+    </div>
+{% endblock %}

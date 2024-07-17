@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+
+{% block contents %}
+<div class="container" id="mainContainer">
+    <h2>Idea List</h2>
+    <p>나의 아이디어를 일지 말고 기록해보세요</p>
+    <div class="sort-dropdown">
+        <label for="sort">정렬기준:</label>
+        <select id="sort" name="sort">
+            <option value="default">--정렬기준--</option>
+            <option value="popularity">찜한기순</option>
+            <option value="likes">등록순</option>
+            <option value="newest">최신순</option>
+            <option value="oldest">이름순</option>
+        </select>
+    </div>
+    <div class="idea-list" >
+        {% for idea in ideas %}
+        <div class="idea-card" >
+            <img src="{{ idea.ideaImage.url }}" alt="JS Image">
+            <h3><a href='{% url 'ideas:detail' idea.pk %} '>{{ idea.title }} </a></h3>
+            <p>예상 개발 툴: {{ idea.devtool }}</p>
+
+            <p>아이디어 관심도: <button onclick="decreaseInterest({{ idea.pk }})">+</button> <span id="interest-{{ idea.pk }}">{{ idea.interset }}</span> <button onclick="increaseInterest({{ idea.pk }})">+</button></p>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+    <script>
+        function increaseInterest(ideaId) {
+            fetch(`/${ideaId}/increase_interest/`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-CSRFToken': '{{ csrf_token }}'
+                },
+            })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        document.getElementById(`interest-${ideaId}`).textContent = data.new_interest;
+                    }
+                });
+        }
+        function decreaseInterest(ideaId) {
+            fetch(`/${ideaId}/decrease_interest/`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-CSRFToken': '{{ csrf_token }}'
+                },
+            })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        document.getElementById(`interest-${ideaId}`).textContent = data.new_interest;
+                    }
+                });
+        }
+    </script>
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+
+{% block contents %}
+    <div class="detail_container">
+        <div class="detail_content">
+            <h2>Idea Detail</h2>
+            <p>아이디어 세부내용 페이지 입니다. 당신이 구현하려 한 아이디어들을 자세히 살펴보세요.</p>
+            <div>
+                <img src="{{ idea.ideaImage.url }}" alt="Idea Image" class="detail_img">
+            </div>
+            <h3>{{ idea.title }}</h3>
+            <p>1) 아이디어 관심도: {{ idea.interset }}</p>
+            <p><a href="{% url 'devtools:detail' idea.devtool.id %}">2) 예상 개발 툴: <strong>{{ idea.devtool }}</strong></a></p>
+            <p>3) 아이디어 설명: {{ idea.content }}</p>
+            <div class="detail_buttens">
+                <form action="{% url 'ideas:delete' idea.id %}" method="POST">
+                    {% csrf_token %}
+                    <button type="submit" class="delete-btn" >삭제</button>
+                </form>
+                <a href="{% url 'ideas:main' %}" class="list-btn">목록</a>
+                <a href="{% url 'ideas:update' idea.id %}" class="edit-btn">수정</a>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

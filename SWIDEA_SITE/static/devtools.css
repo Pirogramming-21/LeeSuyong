@@ -1,0 +1,40 @@
+.content h2 {
+    margin-top: 0;
+    color: #333;
+}
+.devtool-list {
+    width: 100%;
+    border-collapse: collapse;
+}
+.devtool-list th, .devtool-list td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+.devtool-detail {
+    text-align: left;
+    margin-top: 20px;
+}
+.buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.buttons a, .buttons form button {
+    padding: 10px 20px;
+    margin: 5px;
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+h2, h3, h4 {
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+}
